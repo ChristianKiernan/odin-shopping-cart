@@ -1,5 +1,5 @@
 import App from "./App";
-import Checkout from "./Checkout";
+import Shop from "./Shop";
 import ErrorPage from "./ErrorPage";
 
 const routes = [
@@ -9,8 +9,8 @@ const routes = [
         errorElement: <ErrorPage />,
     },
     {
-        path: "/checkout",
-        element: <Checkout />,
+        path: "/shop",
+        element: <Shop />,
         errorElement: <ErrorPage />,
     },
 ];

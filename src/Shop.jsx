@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
 
-const Checkout = () => {
+const Shop = () => {
     return (
-        <div id="checkout">
-            <h1>Checkout Page</h1>
+        <div id="shop">
+            <h1>Shop Now</h1>
             <Link to="/">Homepage</Link>
         </div>
     );
 };
 
-export default Checkout;
+export default Shop;
