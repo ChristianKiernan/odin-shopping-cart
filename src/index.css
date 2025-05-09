@@ -27,22 +27,45 @@ a:hover {
         "footer";
 }
 
+.navHeading {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .navbar,
 .footer {
     display: flex;
-    flex-direction: column;
+    justify-content: center;
     align-items: center;
     background-color: #333;
     color: white;
     padding: 1rem;
 }
 
-.navbarRow2 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1rem;
-}
 .content {
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: auto;
+    background-color: rgb(201, 201, 211);
+    text-align: center;
+    padding: 1rem;
+}
+
+.contentCard {
+    background-color: grey;
+    display: flex;
+    padding: 15px;
+    gap: 10px;
+    flex-direction: column;
+    max-width: 50%;
+    border-radius: 5px;
+    box-shadow: 0px 4px 8px 0 grba(0, 0, 0, 0.2),
+        0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.cartIcon {
+    margin-left: auto;
 }
