@@ -1,7 +1,10 @@
+import { Link } from "react-router-dom";
+
 const App = () => {
     return (
         <>
-            <h1>Yes, React is working</h1>
+            <h1>HomePage</h1>
+            <Link to="/checkout">Checkout</Link>
         </>
     );
 };
