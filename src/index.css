@@ -48,7 +48,7 @@ a:hover {
     align-items: center;
     background-color: #333;
     color: white;
-    padding: 1rem;
+    padding: 40px;
 }
 
 .content,
@@ -68,17 +68,19 @@ a:hover {
 
 .contentCard,
 .productCard {
-    background-color: grey;
+    background-color: white;
     display: flex;
-    padding: 15px;
+    padding: 20px;
     gap: 10px;
     flex-direction: column;
     border-radius: 5px;
     box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
+.contentCard {
+    font-size: 1.5rem;
+}
 .productCard {
-    background: white;
     justify-content: center;
     align-items: center;
     padding: 30px;
@@ -88,6 +90,7 @@ a:hover {
 
 .cartIcon {
     margin-left: auto;
+    margin-right: 50px;
 }
 
 img:hover {
