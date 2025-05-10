@@ -1,4 +1,5 @@
-@import-normalize;
+@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+
 h1,
 h2,
 h3,
@@ -7,6 +8,10 @@ h5,
 p,
 a {
     margin: 0;
+}
+
+body {
+    font-family: "Open Sans";
 }
 
 a {
@@ -26,7 +31,7 @@ a:hover {
         "navbar"
         "content"
         "footer";
-    height: 100vh;
+    min-height: 100vh;
 }
 
 .navHeading {
@@ -46,14 +51,23 @@ a:hover {
     padding: 1rem;
 }
 
-.content {
+.content,
+.productItems {
     gap: 15px;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: repeat(3, 1fr);
     padding: 1rem;
 }
 
-.contentCard {
+.productItems {
+    gap: 25px;
+    padding: 25px;
+}
+
+.contentCard,
+.productCard {
     background-color: grey;
     display: flex;
     padding: 15px;
@@ -62,6 +76,14 @@ a:hover {
     border-radius: 5px;
     box-shadow: 0px 4px 8px 0 rgba(0, 0, 0, 0.2),
         0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.productCard {
+    background: white;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 1.05rem;
+    height: 420px;
 }
 
 .cartIcon {

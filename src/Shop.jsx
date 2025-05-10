@@ -10,7 +10,7 @@ const Shop = () => {
                 heading="Shop Our Wonderful Collection"
                 url={<Link to="/">Return to Homepage</Link>}
             />
-            <div className="content">
+            <div>
                 <Content pageType="shop" />
             </div>
             <Footer />
