@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import AddItem from "./AddItem";
 
 const FetchData = () => {
     const [products, setProducts] = useState([]);
@@ -56,6 +57,7 @@ const ProductCard = () => {
                         height="250px"
                     />
                     <h2>{product.title}</h2>
+                    <AddItem itemPrice={product.price}/>
                     <p>{toCapitalCase(product.category)}</p>
                     <h4>{toPrice(product.price)}</h4>
                 </div>
