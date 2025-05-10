@@ -14,7 +14,7 @@ const FetchData = () => {
                 return res.json();
             })
             .then((data) => {
-                setProducts(data.slice(0, 6));
+                setProducts(data.slice(2, 8));
                 setLoading(false);
             })
             .catch((err) => {
@@ -29,22 +29,35 @@ const FetchData = () => {
 const ProductCard = () => {
     const { products, error, loading } = FetchData();
 
+    const toCapitalCase = (category) => {
+        const newString = category.charAt(0).toUpperCase() + category.slice(1);
+        return newString;
+    };
+
+    const toPrice = (price) => {
+        let priceString = price.toString();
+        if (priceString.includes(".")) {
+            return `$${priceString}`;
+        }
+        return `$${priceString}.00`;
+    };
+
     if (loading) return <p>Loading products...</p>;
     if (error) return <p>Error: {error}</p>;
 
     return (
-        <div className="contentCard">
+        <div className="productItems">
             {products.map((product) => (
-                <div key={product.id}>
+                <div className="productCard" key={product.id}>
                     <img
                         src={product.image}
                         alt={product.title}
-                        width="200px"
-                        height="200px"
+                        width="250px"
+                        height="250px"
                     />
-                    <h3>{product.title}</h3>
-                    <p>{product.description}</p>
-                    <p>{product.price}</p>
+                    <h2>{product.title}</h2>
+                    <p>{toCapitalCase(product.category)}</p>
+                    <h4>{toPrice(product.price)}</h4>
                 </div>
             ))}
         </div>
