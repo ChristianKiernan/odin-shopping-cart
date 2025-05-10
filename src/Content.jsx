@@ -2,7 +2,7 @@ import ProductCard from "./ProductCard";
 import ContentCard from "./ContentCard";
 import { Fragment } from "react";
 
-const Content = ({ pageType }) => {
+const Content = ({ pageType = "homepage", addToCart }) => {
     return (
         <>
             {pageType === "homepage" ? (
@@ -30,7 +30,7 @@ const Content = ({ pageType }) => {
                     />
                 </Fragment>
             ) : (
-                <ProductCard />
+                <ProductCard addToCart={addToCart}/>
             )}
         </>
     );

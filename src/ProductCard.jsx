@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import AddItem from "./AddItem";
 
 const FetchData = () => {
     const [products, setProducts] = useState([]);
@@ -27,7 +26,9 @@ const FetchData = () => {
     return { products, error, loading };
 };
 
-const ProductCard = () => {
+const ProductCard = ({ addToCart }) => {
+    console.log("ProductCard rendered");
+    console.log("addToCart is:", addToCart);
     const { products, error, loading } = FetchData();
 
     const toCapitalCase = (category) => {
@@ -57,7 +58,17 @@ const ProductCard = () => {
                         height="250px"
                     />
                     <h2>{product.title}</h2>
-                    <AddItem itemPrice={product.price}/>
+                    <button
+                        onClick={() => {
+                            if (typeof addToCart === "function") {
+                                addToCart(product);
+                            } else {
+                                console.error("Not a function", addToCart);
+                            }
+                        }}
+                    >
+                        Add To Cart
+                    </button>
                     <p>{toCapitalCase(product.category)}</p>
                     <h4>{toPrice(product.price)}</h4>
                 </div>

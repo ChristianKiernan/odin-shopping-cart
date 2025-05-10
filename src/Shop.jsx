@@ -3,7 +3,7 @@ import NavBar from "./NavBar";
 import Content from "./Content";
 import Footer from "./Footer";
 
-const Shop = () => {
+const Shop = ({addToCart}) => {
     return (
         <div className="wrapper">
             <NavBar
@@ -11,7 +11,7 @@ const Shop = () => {
                 url={<Link to="/">Return to Homepage</Link>}
             />
             <div>
-                <Content pageType="shop" />
+                <Content pageType="shop" addToCart={addToCart}/>
             </div>
             <Footer />
         </div>
