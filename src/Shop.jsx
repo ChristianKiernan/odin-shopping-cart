@@ -11,8 +11,8 @@ const Shop = () => {
                 url={<Link to="/">Return to Homepage</Link>}
             />
             <div className="content">
-                <Content />
-                <Content />
+                <Content pageType="shop" />
+                <Content pageType="shop"/>
             </div>
             <Footer />
         </div>

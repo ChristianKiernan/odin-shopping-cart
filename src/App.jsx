@@ -11,7 +11,7 @@ const App = () => {
                 url={<Link to="/shop">Shop Now</Link>}
             />
             <div className="content">
-                <Content />
+                <Content pageType="homepage"/>
             </div>
             <Footer />
         </div>
