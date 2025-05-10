@@ -12,7 +12,6 @@ const Shop = () => {
             />
             <div className="content">
                 <Content pageType="shop" />
-                <Content pageType="shop"/>
             </div>
             <Footer />
         </div>
