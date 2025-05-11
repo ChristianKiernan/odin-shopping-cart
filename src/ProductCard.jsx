@@ -27,8 +27,6 @@ const FetchData = () => {
 };
 
 const ProductCard = ({ addToCart }) => {
-    console.log("ProductCard rendered");
-    console.log("addToCart is:", addToCart);
     const { products, error, loading } = FetchData();
 
     const toCapitalCase = (category) => {
