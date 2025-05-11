@@ -16,6 +16,7 @@ body {
 
 button {
     border: 3px rgb(201, 201, 211);
+    box-shadow: 2px 2px black;
     background-color: rgb(201, 201, 211);
     padding: 10px;
     border-radius: 10px;
@@ -24,7 +25,8 @@ button {
 
 button:hover {
     cursor: pointer;
-    transform: scale(1.05);
+    transform: scale(1.02);
+    background-color: #a7a3a3;
 }
 
 
@@ -110,7 +112,26 @@ a:hover {
     margin-left: auto;
     margin-right: 60px;
 }
+.circle {
+    background-color: #535bf2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 40px;
+    transform: translate(-30px, -20px);
+    color: white;
+    font-size: 1.5rem;
+}
 .cartIcon >button {
     background-color: white;
     box-shadow: 2px 2px black;
+}
+.checkout {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
 }
