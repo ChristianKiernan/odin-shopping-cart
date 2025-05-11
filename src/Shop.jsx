@@ -1,9 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useOutletContext } from "react-router-dom";
 import NavBar from "./NavBar";
 import Content from "./Content";
 import Footer from "./Footer";
 
-const Shop = ({addToCart}) => {
+const Shop = () => {
+    const { addToCart } = useOutletContext();
     return (
         <div className="wrapper">
             <NavBar

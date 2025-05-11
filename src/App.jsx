@@ -1,21 +1,22 @@
+import { Outlet } from "react-router-dom";
 import { useState } from "react";
-import Homepage from "./Homepage";
-import Shop from "./Shop";
 
 const App = () => {
     const [cart, setCart] = useState([]);
 
     const addToCart = (item) => {
-        setCart(prevCart => [...prevCart, item])
+        setCart((prevCart) => [...prevCart, item]);
     };
 
     const totalItems = cart.length;
-    const totalPrice = cart.reduce((acc, item) => acc + item.price, 0)
+    const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
     return (
         <>
-            <h1>{totalItems}{totalPrice}</h1>
-            <Homepage addToCart={addToCart}/>
-            <Shop addToCart={addToCart}/>
+            <div>
+                <p>Total Items: {totalItems}</p>
+                <p>Total Price: ${totalPrice.toFixed(2)}</p>
+            </div>
+            <Outlet context={{ addToCart }} />
         </>
     );
 };
