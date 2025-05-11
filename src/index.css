@@ -14,7 +14,22 @@ body {
     font-family: "Open Sans";
 }
 
+button {
+    border: 3px rgb(201, 201, 211);
+    background-color: rgb(201, 201, 211);
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: 500;
+}
+
+button:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+}
+
+
 a {
+    text-decoration: none;
     font-size: 1.5rem;
     color: #646cff;
 }
@@ -89,11 +104,13 @@ a:hover {
 }
 
 .cartIcon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin-left: auto;
-    margin-right: 50px;
+    margin-right: 60px;
 }
-
-img:hover {
-    cursor: pointer;
-    transform: scale(1.05);
+.cartIcon >button {
+    background-color: white;
+    box-shadow: 2px 2px black;
 }

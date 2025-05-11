@@ -58,6 +58,8 @@ const ProductCard = ({ addToCart }) => {
                         height="250px"
                     />
                     <h2>{product.title}</h2>
+                    <p>{toCapitalCase(product.category)}</p>
+                    <h4>{toPrice(product.price)}</h4>
                     <button
                         onClick={() => {
                             if (typeof addToCart === "function") {
@@ -69,8 +71,6 @@ const ProductCard = ({ addToCart }) => {
                     >
                         Add To Cart
                     </button>
-                    <p>{toCapitalCase(product.category)}</p>
-                    <h4>{toPrice(product.price)}</h4>
                 </div>
             ))}
         </div>
