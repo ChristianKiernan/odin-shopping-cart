@@ -1,5 +1,5 @@
 import { useOutletContext } from "react-router-dom";
-import cart from "./assets/cart.svg";
+import cart from "../assets/cart.svg"
 
 const NavBar = ({ heading, url }) => {
     const { totalItems, totalPrice } = useOutletContext();
