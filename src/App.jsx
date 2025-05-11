@@ -12,11 +12,7 @@ const App = () => {
     const totalPrice = cart.reduce((acc, item) => acc + item.price, 0);
     return (
         <>
-            <div>
-                <p>Total Items: {totalItems}</p>
-                <p>Total Price: ${totalPrice.toFixed(2)}</p>
-            </div>
-            <Outlet context={{ addToCart }} />
+            <Outlet context={{ addToCart, totalItems, totalPrice }} />
         </>
     );
 };
