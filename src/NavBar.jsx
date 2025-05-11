@@ -10,9 +10,18 @@ const NavBar = ({ heading, url }) => {
                 <h5>{url}</h5>
             </div>
             <div className="cartIcon">
-                <img src={cart} height="80px"/>
-                <span>{totalItems} - ${totalPrice.toFixed(2)} </span>
-                <button>Check Out</button>
+                <img src={cart} height="80px" />
+                {totalItems > 0 && (
+                    <>
+                        <div className="circle">
+                            <span>{totalItems}</span>
+                        </div>
+                        <div className="checkout">
+                            <p>${totalPrice.toFixed(2)}</p>
+                            <button>Check Out</button>
+                        </div>
+                    </>
+                )}
             </div>
         </div>
     );
