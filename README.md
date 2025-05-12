@@ -5,7 +5,7 @@ This was implemented as a submission for the React Course in the Odin Project
 Each item has "Add to Cart" functionality, and the app maintains an item and
 price count based on what the user adds to their cart. 
 
-Link to project: (https://odin-shopping-cart-7v1cle8qq-christiankiernans-projects.vercel.app)
+Link to project: https://odin-shopping-cart-7v1cle8qq-christiankiernans-projects.vercel.app
 
 ## How It's Made
 **Tech used:** HTML, CSS, JavaScript, React
