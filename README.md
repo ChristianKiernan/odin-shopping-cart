@@ -6,6 +6,8 @@ Each item has "Add to Cart" functionality, and the app maintains an item and
 price count based on what the user adds to their cart. 
 
 Link to project: https://odin-shopping-cart-7v1cle8qq-christiankiernans-projects.vercel.app
+![Project Screenshot](https://github.com/user-attachments/assets/a1982a84-9eae-431e-a5d5-95758a00b7c9)
+
 
 ## How It's Made
 **Tech used:** HTML, CSS, JavaScript, React
